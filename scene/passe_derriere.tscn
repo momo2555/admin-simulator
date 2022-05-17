@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://image/plafond4.png" type="Texture" id=1]
+[ext_resource path="res://image/plafond2.png" type="Texture" id=2]
+[ext_resource path="res://image/plafond1.png" type="Texture" id=3]
+
+[node name="passe derrière" type="Node"]
+
+[node name="plafond1" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="plafond2" type="Sprite" parent="."]
+position = Vector2( -32, 0 )
+texture = ExtResource( 2 )
+
+[node name="plafond4" type="Sprite" parent="."]
+position = Vector2( 32, 0 )
+texture = ExtResource( 1 )

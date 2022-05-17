@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/main perso2D frames.bmp-d1a3341147ecc1a47e36c0ac4ba6f3fb.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://personnage/main perso2D frames.bmp"
+dest_files=[ "res://.import/main perso2D frames.bmp-d1a3341147ecc1a47e36c0ac4ba6f3fb.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

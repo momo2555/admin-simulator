@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://ecriture/pxl.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://code/Dialog_bon_sang.gd" type="Script" id=2]
+[ext_resource path="res://ecriture/boitedialog.png" type="Texture" id=3]
+[ext_resource path="res://ecriture/triangle.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "anim_triangle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 368, -192 ), Vector2( 368, -187 ) ]
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Dialog" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 38.4982
+margin_top = 130.222
+margin_right = 78.4982
+margin_bottom = 170.222
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Dialog"]
+anchor_left = -1.2
+anchor_top = -3.6
+anchor_right = -1.2
+anchor_bottom = -3.6
+margin_left = -448.0
+margin_top = -160.0
+margin_right = 448.0
+margin_bottom = -32.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialog"]
+anchor_left = -7.2
+anchor_top = -3.6
+anchor_right = -7.2
+anchor_bottom = -3.6
+margin_left = -185.0
+margin_top = -140.0
+margin_right = 664.0
+margin_bottom = -64.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.0980392, 0.0705882, 0.0705882, 1 )
+bbcode_enabled = true
+text = "this is my test label"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Tween" type="Tween" parent="Dialog"]
+
+[node name="letriangle" type="Sprite" parent="Dialog"]
+position = Vector2( 368, -192 )
+scale = Vector2( 1.75001, 1.75 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialog/letriangle"]
+anims/anim_triangle = SubResource( 2 )
+
+[connection signal="tween_completed" from="Dialog/Tween" to="Dialog" method="_on_Tween_tween_completed"]

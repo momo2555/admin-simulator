@@ -1,0 +1,447 @@
+[gd_scene load_steps=59 format=2]
+
+[ext_resource path="res://image/mur1B.png" type="Texture" id=1]
+[ext_resource path="res://image/plafond2B.png" type="Texture" id=2]
+[ext_resource path="res://image/mur5.png" type="Texture" id=3]
+[ext_resource path="res://image/mur7.png" type="Texture" id=4]
+[ext_resource path="res://image/plafond4B.png" type="Texture" id=5]
+[ext_resource path="res://image/mur6.png" type="Texture" id=6]
+[ext_resource path="res://image/mur8.png" type="Texture" id=7]
+[ext_resource path="res://image/plafond5A.png" type="Texture" id=8]
+[ext_resource path="res://image/plafond6B.png" type="Texture" id=9]
+[ext_resource path="res://image/mur9.png" type="Texture" id=10]
+[ext_resource path="res://image/plafond3B.png" type="Texture" id=11]
+[ext_resource path="res://image/mur4B.png" type="Texture" id=12]
+[ext_resource path="res://image/plafond1B.png" type="Texture" id=13]
+[ext_resource path="res://image/mur10.png" type="Texture" id=14]
+[ext_resource path="res://image/plafond4A.png" type="Texture" id=15]
+[ext_resource path="res://image/plafond5B.png" type="Texture" id=16]
+[ext_resource path="res://image/mur2B.png" type="Texture" id=17]
+[ext_resource path="res://image/mur3B.png" type="Texture" id=18]
+[ext_resource path="res://image/plafond11A.png" type="Texture" id=19]
+[ext_resource path="res://image/plafond9B.png" type="Texture" id=20]
+[ext_resource path="res://image/plafond10B.png" type="Texture" id=21]
+[ext_resource path="res://image/plafond10A.png" type="Texture" id=22]
+[ext_resource path="res://image/plafond8B.png" type="Texture" id=23]
+[ext_resource path="res://image/plafond7B.png" type="Texture" id=24]
+[ext_resource path="res://image/plafond12B.png" type="Texture" id=25]
+[ext_resource path="res://image/plafond11B.png" type="Texture" id=26]
+[ext_resource path="res://image/plafond13C.png" type="Texture" id=27]
+[ext_resource path="res://image/sol.png" type="Texture" id=28]
+[ext_resource path="res://image/plafond15C.png" type="Texture" id=29]
+[ext_resource path="res://image/plafond16C.png" type="Texture" id=30]
+[ext_resource path="res://image/plafond14C.png" type="Texture" id=31]
+[ext_resource path="res://image/plafond17A.png" type="Texture" id=32]
+[ext_resource path="res://image/salle.png" type="Texture" id=33]
+[ext_resource path="res://image/plafond17B.png" type="Texture" id=34]
+
+[sub_resource type="RectangleShape2D" id=1]
+custom_solver_bias = 0.455
+extents = Vector2( 8, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 8, 16 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 16, 8 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 16, 8 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 16, 8 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8, 16 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 8, 16 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8, 16 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 8, 16 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 8, 16 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 8, 16 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 8, 16 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 8, 16 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 16, 16 )
+
+[node name="tileset01" type="Node"]
+
+[node name="mur2B" type="Sprite" parent="."]
+position = Vector2( 0, -48 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mur2B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mur2B/StaticBody2D"]
+position = Vector2( -8, 0 )
+shape = SubResource( 1 )
+
+[node name="mur3B" type="Sprite" parent="."]
+position = Vector2( 48, -48 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mur3B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mur3B/StaticBody2D"]
+position = Vector2( 8, -8 )
+shape = SubResource( 2 )
+
+[node name="mur1B" type="Sprite" parent="."]
+position = Vector2( -48, -48 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mur1B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mur1B/StaticBody2D"]
+position = Vector2( 8, 0 )
+shape = SubResource( 9 )
+
+[node name="mur4B" type="Sprite" parent="."]
+position = Vector2( 96, -48 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mur4B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mur4B/StaticBody2D"]
+position = Vector2( -8, -8 )
+shape = SubResource( 18 )
+
+[node name="mur5" type="Sprite" parent="."]
+position = Vector2( 144, -48 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mur5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mur5/StaticBody2D"]
+shape = SubResource( 19 )
+
+[node name="mur6" type="Sprite" parent="."]
+position = Vector2( 192, -48 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mur6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mur6/StaticBody2D"]
+position = Vector2( 0, -8 )
+shape = SubResource( 20 )
+
+[node name="mur7" type="Sprite" parent="."]
+position = Vector2( 240, -48 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mur7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mur7/StaticBody2D"]
+position = Vector2( 0, -8 )
+shape = SubResource( 21 )
+
+[node name="mur8" type="Sprite" parent="."]
+position = Vector2( 288, -48 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mur8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mur8/StaticBody2D"]
+position = Vector2( 0, -8 )
+shape = SubResource( 22 )
+
+[node name="mur9" type="Sprite" parent="."]
+position = Vector2( 336, -48 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mur9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mur9/StaticBody2D"]
+shape = SubResource( 23 )
+
+[node name="mur10" type="Sprite" parent="."]
+position = Vector2( 384, -48 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mur10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mur10/StaticBody2D"]
+shape = SubResource( 24 )
+
+[node name="plafond1B" type="Sprite" parent="."]
+position = Vector2( -48, 0 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafond1B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafond1B/StaticBody2D"]
+position = Vector2( 8, 0 )
+shape = SubResource( 3 )
+
+[node name="plafond2B" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafond2B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafond2B/StaticBody2D"]
+position = Vector2( -8, 0 )
+shape = SubResource( 4 )
+
+[node name="plafond3B" type="Sprite" parent="."]
+position = Vector2( 48, 0 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafond3B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafond3B/StaticBody2D"]
+position = Vector2( 8, 0 )
+shape = SubResource( 5 )
+
+[node name="plafond4A" type="Sprite" parent="."]
+position = Vector2( 96, 0 )
+texture = ExtResource( 15 )
+
+[node name="plafond4B" type="Sprite" parent="."]
+position = Vector2( 144, 0 )
+texture = ExtResource( 5 )
+
+[node name="plafond5A" type="Sprite" parent="."]
+position = Vector2( 192, 0 )
+texture = ExtResource( 8 )
+
+[node name="plafond5B" type="Sprite" parent="."]
+position = Vector2( 240, 0 )
+texture = ExtResource( 16 )
+
+[node name="plafond6B" type="Sprite" parent="."]
+position = Vector2( 288, 0 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafond6B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafond6B/StaticBody2D"]
+position = Vector2( 8, 8 )
+shape = SubResource( 6 )
+
+[node name="plafond7B" type="Sprite" parent="."]
+position = Vector2( 336, 0 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafond7B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafond7B/StaticBody2D"]
+position = Vector2( -8, 8 )
+shape = SubResource( 7 )
+
+[node name="plafond8B" type="Sprite" parent="."]
+position = Vector2( 384, 0 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafond8B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafond8B/StaticBody2D"]
+position = Vector2( -8, 0 )
+shape = SubResource( 8 )
+
+[node name="plafond9B" type="Sprite" parent="."]
+position = Vector2( 432, 0 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafond9B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafond9B/StaticBody2D"]
+position = Vector2( 8, 0 )
+shape = SubResource( 10 )
+
+[node name="plafond10A" type="Sprite" parent="."]
+position = Vector2( 480, 0 )
+texture = ExtResource( 22 )
+
+[node name="plafond10B" type="Sprite" parent="."]
+position = Vector2( -48, 48 )
+texture = ExtResource( 21 )
+
+[node name="plafond11A" type="Sprite" parent="."]
+position = Vector2( 0, 48 )
+texture = ExtResource( 19 )
+
+[node name="plafond11B" type="Sprite" parent="."]
+position = Vector2( 48, 48 )
+texture = ExtResource( 26 )
+
+[node name="plafond12B" type="Sprite" parent="."]
+position = Vector2( 96, 48 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafond12B"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafond12B/StaticBody2D"]
+position = Vector2( -8, 0 )
+shape = SubResource( 11 )
+
+[node name="plafond13C" type="Sprite" parent="."]
+position = Vector2( 144, 48 )
+texture = ExtResource( 27 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafond13C"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafond13C/StaticBody2D"]
+position = Vector2( 8, 0 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="plafond13C/StaticBody2D"]
+position = Vector2( -8, -8 )
+shape = SubResource( 13 )
+
+[node name="plafond14C" type="Sprite" parent="."]
+position = Vector2( 192, 48 )
+texture = ExtResource( 31 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafond14C"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafond14C/StaticBody2D"]
+position = Vector2( -8, 0 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="plafond14C/StaticBody2D"]
+position = Vector2( 8, -8 )
+shape = SubResource( 15 )
+
+[node name="plafpnd15C" type="Sprite" parent="."]
+position = Vector2( 240, 48 )
+texture = ExtResource( 29 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafpnd15C"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafpnd15C/StaticBody2D"]
+shape = SubResource( 16 )
+
+[node name="plafond16C" type="Sprite" parent="."]
+position = Vector2( 288, 48 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plafond16C"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plafond16C/StaticBody2D"]
+shape = SubResource( 17 )
+
+[node name="plafond17A" type="Sprite" parent="."]
+position = Vector2( 336, 48 )
+texture = ExtResource( 32 )
+
+[node name="plafond17B" type="Sprite" parent="."]
+position = Vector2( 384, 48 )
+texture = ExtResource( 34 )
+
+[node name="salle" type="Sprite" parent="."]
+position = Vector2( 432, 48 )
+texture = ExtResource( 33 )
+
+[node name="sol" type="Sprite" parent="."]
+position = Vector2( 480, 48 )
+texture = ExtResource( 28 )

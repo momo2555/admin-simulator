@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://ecriture/boitedialog.png" type="Texture" id=1]
+[ext_resource path="res://ecriture/pxl.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scene/Dialogbox.gd" type="Script" id=3]
+[ext_resource path="res://ecriture/triangle.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "anim_triangle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 496, 52 ), Vector2( 496, 54 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogbox" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -256.0
+margin_top = -88.0
+margin_right = 256.0
+margin_bottom = -24.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Dialogbox"]
+anchor_left = 1.906
+anchor_top = 9.0
+anchor_right = 1.906
+anchor_bottom = 9.0
+margin_left = -975.872
+margin_top = -576.0
+margin_right = -463.872
+margin_bottom = -512.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialogbox"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "Bon sang qu'est-ce qu-on peut s'ennuyer ici.
+Mon petit"
+text = "Bon sang qu'est-ce qu-on peut s'ennuyer ici.
+Mon petit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="Dialogbox"]
+
+[node name="letriangle" type="Sprite" parent="Dialogbox"]
+position = Vector2( 496, 53.5411 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialogbox/letriangle"]
+autoplay = "anim_triangle"
+anims/anim_triangle = SubResource( 2 )
+[connection signal="tween_completed" from="Dialogbox/Tween" to="Dialogbox" method="_on_Tween_tween_completed"]

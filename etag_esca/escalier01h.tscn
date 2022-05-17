@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tiles/passederriere.tres" type="TileSet" id=1]
+[ext_resource path="res://tiles/passedevant_et_nullepart1.tres" type="TileSet" id=2]
+[ext_resource path="res://scene/scene1.gd" type="Script" id=3]
+[ext_resource path="res://scene/Player.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 104 )
+
+[node name="scene1" type="Node2D"]
+script = ExtResource( 3 )
+next_down = "res://etag_esca/escalier01.tscn"
+next_up = "res://etag_esca/RDC.tscn"
+
+[node name="TileMaparriereplan" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1310764, -536870906, 0, -1310759, 536870918, 0, -1245228, 4, 0, -1245227, 1073741828, 0, -1245226, 1073741828, 0, -1245225, 1073741828, 0, -1245224, 1073741828, 0, -1245223, 536870918, 0, -1179692, -1610612732, 0, -1179691, 1073741828, 0, -1179690, 1073741828, 0, -1179689, 1073741828, 0, -1179688, 1073741828, 0, -1179687, 536870918, 0, -1114156, -1610612732, 0, -1114155, 1073741828, 0, -1114154, 1073741828, 0, -1114153, 1073741828, 0, -1114152, 1073741828, 0, -1114151, 536870918, 0, -1048620, 536870915, 0, -1048619, 536870915, 0, -1048618, 536870915, 0, -1048617, 536870915, 0, -1048616, 536870915, 0, -1048615, 536870918, 0, -983079, 536870918, 0, -917548, 1073741830, 0, -917543, 536870918, 0, -852012, 1073741830, 0, -852007, 536870918, 0, -786476, 1073741830, 0, -786471, 536870918, 0, -720940, 1073741830, 0, -720935, 536870918, 0, -655404, 1073741830, 0, -655399, 536870918, 0, -589868, 1073741830, 0, -589863, 536870918, 0, -524332, 1073741830, 0, -524327, 536870918, 0, -458796, 1073741830, 0, -458791, 536870918, 0, -393260, 1073741830, 0, -393255, 536870918, 0, -327724, 1073741830, 0, -327719, 536870919, 0, -262188, 1073741830, 0, -262183, 536870912, 0, -196652, 1073741830, 0, -196647, 536870912, 0, -131116, 1073741830, 0, -131111, 536870912, 0, -196605, 6, 0, -65580, 1073741830, 0, -65575, 536870913, 0, 65492, 536870917, 0, 65493, 4, 0, 65494, 4, 0, 65495, 4, 0, 65496, 4, 0, 65497, 5, 0, 131028, 536870917, 0, 131029, 4, 0, 131030, 4, 0, 131031, 4, 0, 131032, 4, 0, 131033, 5, 0, 196564, 536870917, 0, 196565, 4, 0, 196566, 4, 0, 196567, 4, 0, 196568, 4, 0, 196569, 5, 0, 262100, 2, 0, 262101, 536870915, 0, 262102, 536870915, 0, 262103, 536870915, 0, 262104, 536870915, 0, 262105, 536870914, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 64, -48 )
+
+[node name="TileMappremierplan" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1310763, 1073741825, 0, -1310762, 1073741825, 0, -1310761, 1073741825, 0, -1310760, 1073741825, 0, -1310759, 536870912, 0, -983084, 536870914, 0, -44, 1073741824, 0, -43, 536870913, 0, -42, 536870913, 0, -41, 536870913, 0, -40, 536870913, 0, -39, -536870910, 0 )
+
+[node name="Transitions" type="Node2D" parent="."]
+position = Vector2( -96, 0 )
+
+[node name="Spawn_up" type="Position2D" parent="Transitions"]
+position = Vector2( -544, -32 )
+
+[node name="Spawn_down" type="Position2D" parent="Transitions"]
+position = Vector2( -576, -272 )
+scale = Vector2( 38.4859, -32.8177 )
+
+[node name="Exit_down" type="Area2D" parent="Transitions"]
+position = Vector2( -80, -592 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Transitions/Exit_down"]
+polygon = PoolVector2Array( -528, 288, -528, 352, -560, 352, -560, 288 )
+
+[node name="Exit_up" type="Area2D" parent="Transitions"]
+position = Vector2( -496, -16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Transitions/Exit_up"]
+position = Vector2( -16, 16 )
+polygon = PoolVector2Array( 0, 0, 0, -48, 32, -48, 32, 16, 0, 16 )
+
+[node name="Lenteur_escal" type="Area2D" parent="."]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lenteur_escal"]
+position = Vector2( -656, -136 )
+shape = SubResource( 1 )
+[connection signal="body_entered" from="Transitions/Exit_down" to="." method="_on_Exit_down_body_entered"]
+[connection signal="body_entered" from="Transitions/Exit_up" to="." method="_on_Exit_up_body_entered"]
+[connection signal="body_entered" from="Lenteur_escal" to="." method="_on_Lenteur_escal_body_entered"]
+[connection signal="body_exited" from="Lenteur_escal" to="." method="_on_Lenteur_escal_body_exited"]
